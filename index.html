@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <div class="cont">
+        </div>
+
+    <script>
+        // Animasi toggle Sign In/Sign Up
+        document.querySelector('.img__btn').addEventListener('click', function() {
+            document.querySelector('.cont').classList.toggle('s--signup');
+        });
+
+        // Logika sederhana untuk pindah halaman
+        document.querySelector('.sign-in .submit').addEventListener('click', function() {
+            const email = document.querySelector('.sign-in input[type="email"]').value;
+            const password = document.querySelector('.sign-in input[type="password"]').value;
+
+            if (email !== "" && password !== "") {
+                window.location.href = "home.html"; // Pindah ke website pribadi
+            } else {
+                alert("Harap isi email dan password!");
+            }
+        });
+    </script>
+</body>
+</html>
